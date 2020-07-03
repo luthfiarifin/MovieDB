@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("android.extensions")
+    kotlin("kapt")
 }
 
 android {
@@ -35,6 +36,13 @@ dependencies {
     implementation(Android.ktx)
     implementation(Android.appcompat)
     implementation(Android.constraintLayout)
+
+    // Dagger
+    implementation(Dagger.dagger)
+    implementation(Dagger.androidSupport)
+    kapt(Dagger.compiler)
+    kapt(Dagger.androidProcessor)
+
     testImplementation(Testing.jUnit)
     androidTestImplementation(Testing.extJUnit)
     androidTestImplementation(Testing.espresso)

@@ -13,3 +13,11 @@ object Testing {
     const val extJUnit = "androidx.test.ext:junit:1.1.1"
     const val espresso = "androidx.test.espresso:espresso-core:3.2.0"
 }
+
+object Dagger {
+    private const val daggerVersion = "2.27"
+    const val dagger = "com.google.dagger:dagger:$daggerVersion"
+    const val androidSupport = "com.google.dagger:dagger-android-support:$daggerVersion"
+    const val compiler = "com.google.dagger:dagger-compiler:$daggerVersion"
+    const val androidProcessor = "com.google.dagger:dagger-android-processor:$daggerVersion"
+}
