@@ -2,6 +2,7 @@ private object Version {
     const val daggerVersion = "2.27"
     const val retrofitVersion = "2.9.0"
     const val moshi = "1.9.2"
+    const val room = "2.2.5"
 }
 
 object Dependencies {
@@ -25,11 +26,19 @@ object Dagger {
     const val dagger = "com.google.dagger:dagger:${Version.daggerVersion}"
     const val androidSupport = "com.google.dagger:dagger-android-support:${Version.daggerVersion}"
     const val compiler = "com.google.dagger:dagger-compiler:${Version.daggerVersion}"
-    const val androidProcessor = "com.google.dagger:dagger-android-processor:${Version.daggerVersion}"
+    const val androidProcessor =
+        "com.google.dagger:dagger-android-processor:${Version.daggerVersion}"
 }
 
 object Moshi {
     const val kotlin = "com.squareup.moshi:moshi-kotlin:${Version.moshi}"
     const val codeGen = "com.squareup.moshi:moshi-kotlin-codegen:${Version.moshi}"
-    const val retrofitConverter = "com.squareup.retrofit2:converter-moshi:${Version.retrofitVersion}"
+    const val retrofitConverter =
+        "com.squareup.retrofit2:converter-moshi:${Version.retrofitVersion}"
+}
+
+object Room {
+    const val ktx = "androidx.room:room-ktx:2.2.5"
+    const val runtime = "androidx.room:room-runtime:2.2.5"
+    const val compiler = "androidx.room:room-compiler:2.2.5"
 }

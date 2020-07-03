@@ -17,6 +17,16 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = hashMapOf(
+                    "room.schemaLocation" to "$projectDir/schemas",
+                    "room.incremental" to "true",
+                    "room.expandProjection" to "true"
+                )
+            }
+        }
     }
 
     buildTypes {
@@ -61,6 +71,11 @@ dependencies {
     implementation(Moshi.kotlin)
     implementation(Moshi.retrofitConverter)
     kapt(Moshi.codeGen)
+
+    // Room
+    implementation(Room.ktx)
+    implementation(Room.runtime)
+    kapt(Room.compiler)
 
     testImplementation(Testing.jUnit)
     androidTestImplementation(Testing.extJUnit)
