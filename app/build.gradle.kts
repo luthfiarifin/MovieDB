@@ -18,6 +18,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
+        buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/3/\"")
+        buildConfigField("String", "MOVIE_DB_KEY", "\"1e924ebb18bb8856e9245213d420cbcb\"")
+
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = hashMapOf(

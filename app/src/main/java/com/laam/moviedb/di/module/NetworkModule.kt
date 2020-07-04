@@ -17,13 +17,5 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun provideRetrofitInstance(): ApiService = Retrofit.Builder()
-        .baseUrl(ApiService.MOVIE_DB_URL)
-        .addConverterFactory(
-            MoshiConverterFactory.create(
-                Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
-            )
-        )
-        .build()
-        .create(ApiService::class.java)
+    fun provideRetrofitInstance(): ApiService = ApiService.create()
 }
