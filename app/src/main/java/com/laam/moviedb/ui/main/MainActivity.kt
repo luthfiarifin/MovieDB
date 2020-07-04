@@ -1,7 +1,8 @@
-package com.laam.moviedb
+package com.laam.moviedb.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.laam.moviedb.R
 
 /**
  * Created by luthfiarifin on 7/4/2020.

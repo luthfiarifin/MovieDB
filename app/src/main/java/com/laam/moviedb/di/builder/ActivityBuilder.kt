@@ -1,6 +1,6 @@
 package com.laam.moviedb.di.builder
 
-import com.laam.moviedb.MainActivity
+import com.laam.moviedb.ui.main.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
