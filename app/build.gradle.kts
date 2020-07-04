@@ -19,6 +19,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/3/\"")
+        buildConfigField("String", "BASE_IMAGE_URL", "\"https://image.tmdb.org/t/p/w185\"")
         buildConfigField("String", "MOVIE_DB_KEY", "\"1e924ebb18bb8856e9245213d420cbcb\"")
         buildConfigField("String", "REGION", "\"id\"")
 
@@ -64,7 +65,12 @@ dependencies {
     implementation(Dependencies.kotlin)
     implementation(Android.ktx)
     implementation(Android.appcompat)
+
+    // Design
+    implementation(Dependencies.materialDesign)
+    implementation(Dependencies.glide)
     implementation(Android.constraintLayout)
+
 
     // Dagger
     implementation(Dagger.dagger)

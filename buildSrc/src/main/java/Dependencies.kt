@@ -13,6 +13,8 @@ private object Version {
 object Dependencies {
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib:1.3.72"
     const val retrofit = "com.squareup.retrofit2:retrofit:${Version.retrofitVersion}"
+    const val materialDesign = "com.google.android.material:material:1.1.0"
+    const val glide = "com.github.bumptech.glide:glide:4.11.0"
 }
 
 object Android {
