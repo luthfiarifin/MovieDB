@@ -2,6 +2,7 @@ package com.laam.moviedb.di.module
 
 import android.app.Application
 import com.laam.moviedb.data.local.AppDatabase
+import com.laam.moviedb.data.local.dao.MoviesDao
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -16,4 +17,9 @@ abstract class DatabaseModule {
     @Provides
     fun provideRoomInstance(application: Application): AppDatabase =
         AppDatabase.create(application.applicationContext)
+
+    @Singleton
+    @Provides
+    fun provideMoviesDao(appDatabase: AppDatabase): MoviesDao =
+        appDatabase.getMoviesDao()
 }

@@ -20,6 +20,7 @@ android {
 
         buildConfigField("String", "BASE_URL", "\"https://api.themoviedb.org/3/\"")
         buildConfigField("String", "MOVIE_DB_KEY", "\"1e924ebb18bb8856e9245213d420cbcb\"")
+        buildConfigField("String", "REGION", "\"id\"")
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -87,6 +88,10 @@ dependencies {
     // Lifecycle
     implementation(Lifecycle.viewModel)
     implementation(Lifecycle.liveData)
+
+    // Coroutines
+    implementation(Coroutines.core)
+    implementation(Coroutines.android)
 
     testImplementation(Testing.jUnit)
     androidTestImplementation(Testing.extJUnit)

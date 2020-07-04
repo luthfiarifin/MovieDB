@@ -7,6 +7,7 @@ private object Version {
     const val moshi = "1.9.2"
     const val room = "2.2.5"
     const val lifecycle = "2.2.0"
+    const val coroutine = "1.3.5"
 }
 
 object Dependencies {
@@ -50,4 +51,9 @@ object Room {
 object Lifecycle {
     const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Version.lifecycle}"
     const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Version.lifecycle}"
+}
+
+object Coroutines {
+    const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.coroutine}"
+    const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Version.coroutine}"
 }
