@@ -11,6 +11,7 @@ import com.laam.moviedb.BuildConfig
 object ImageBindingUtil {
 
     @BindingAdapter("imageMovieUrl")
+    @JvmStatic
     fun bindImageMovieUrl(view: ImageView, url: String?) {
         url?.let {
             Glide.with(view.context)

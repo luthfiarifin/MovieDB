@@ -5,33 +5,36 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="fontFamily">@font/google_sans</item>
     </style>
 
     <style name="MoviesItemImage">
         <item name="android:layout_marginStart">@dimen/dimen_16</item>
         <item name="android:layout_marginTop">@dimen/dimen_16</item>
         <item name="android:scaleType">centerCrop</item>
-        <item name="android:layout_marginEnd">@dimen/dimen_8</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_16</item>
     </style>
 
     <style name="MoviesItemTitleText">
         <item name="android:layout_marginStart">@dimen/dimen_16</item>
         <item name="android:layout_marginTop">@dimen/dimen_8</item>
-        <item name="android:layout_marginEnd">@dimen/dimen_8</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_16</item>
         <item name="android:textAlignment">textStart</item>
         <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
         <item name="android:textColor">@color/textColor</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="MoviesItemYearText">
         <item name="android:layout_marginStart">@dimen/dimen_16</item>
-        <item name="android:layout_marginTop">@dimen/dimen_4</item>
-        <item name="android:layout_marginEnd">@dimen/dimen_8</item>
+        <item name="android:layout_marginTop">@dimen/dimen_2</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_16</item>
         <item name="android:textAlignment">textStart</item>
         <item name="android:maxLines">1</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_16</item>
         <item name="android:textColor">@color/textColor</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
 </resources>
