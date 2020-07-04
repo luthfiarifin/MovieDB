@@ -5,6 +5,9 @@ import androidx.room.PrimaryKey
 import com.laam.moviedb.model.Movie.Companion.TABLE_NAME
 import com.squareup.moshi.Json
 
+/**
+ * Created by luthfiarifin on 7/4/2020.
+ */
 @Entity(tableName = TABLE_NAME)
 data class Movie(
     @PrimaryKey

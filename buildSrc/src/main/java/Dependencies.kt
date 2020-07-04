@@ -1,3 +1,6 @@
+/**
+ * Created by luthfiarifin on 7/4/2020.
+ */
 private object Version {
     const val daggerVersion = "2.27"
     const val retrofitVersion = "2.9.0"
