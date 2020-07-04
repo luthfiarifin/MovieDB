@@ -46,6 +46,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
@@ -79,6 +83,10 @@ dependencies {
     implementation(Room.ktx)
     implementation(Room.runtime)
     kapt(Room.compiler)
+
+    // Lifecycle
+    implementation(Lifecycle.viewModel)
+    implementation(Lifecycle.liveData)
 
     testImplementation(Testing.jUnit)
     androidTestImplementation(Testing.extJUnit)

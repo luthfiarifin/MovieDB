@@ -6,6 +6,7 @@ private object Version {
     const val retrofitVersion = "2.9.0"
     const val moshi = "1.9.2"
     const val room = "2.2.5"
+    const val lifecycle = "2.2.0"
 }
 
 object Dependencies {
@@ -41,7 +42,12 @@ object Moshi {
 }
 
 object Room {
-    const val ktx = "androidx.room:room-ktx:2.2.5"
-    const val runtime = "androidx.room:room-runtime:2.2.5"
-    const val compiler = "androidx.room:room-compiler:2.2.5"
+    const val ktx = "androidx.room:room-ktx:${Version.room}"
+    const val runtime = "androidx.room:room-runtime:${Version.room}"
+    const val compiler = "androidx.room:room-compiler:${Version.room}"
+}
+
+object Lifecycle {
+    const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Version.lifecycle}"
+    const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Version.lifecycle}"
 }
