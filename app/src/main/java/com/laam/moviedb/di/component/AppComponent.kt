@@ -4,6 +4,7 @@ import android.app.Application
 import com.laam.moviedb.MovieDBApplication
 import com.laam.moviedb.di.builder.ActivityBuilder
 import com.laam.moviedb.di.module.NetworkModule
+import com.laam.moviedb.di.module.ViewModelFactoryModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -18,7 +19,8 @@ import javax.inject.Singleton
     modules = [
         AndroidInjectionModule::class,
         NetworkModule::class,
-        ActivityBuilder::class
+        ActivityBuilder::class,
+        ViewModelFactoryModule::class
     ]
 )
 interface AppComponent : AndroidInjector<MovieDBApplication> {
