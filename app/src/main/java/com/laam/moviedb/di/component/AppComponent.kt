@@ -3,6 +3,7 @@ package com.laam.moviedb.di.component
 import android.app.Application
 import com.laam.moviedb.MovieDBApplication
 import com.laam.moviedb.di.builder.ActivityBuilder
+import com.laam.moviedb.di.module.DatabaseModule
 import com.laam.moviedb.di.module.NetworkModule
 import com.laam.moviedb.di.module.ViewModelFactoryModule
 import com.laam.moviedb.di.module.ViewModelModule
@@ -20,6 +21,7 @@ import javax.inject.Singleton
     modules = [
         AndroidInjectionModule::class,
         NetworkModule::class,
+        DatabaseModule::class,
         ActivityBuilder::class,
         ViewModelFactoryModule::class,
         ViewModelModule::class

@@ -5,6 +5,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.laam.moviedb.ViewModelProviderFactory
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
@@ -14,7 +15,7 @@ import javax.inject.Inject
 abstract class BaseActivity<VB : ViewDataBinding, VM : ViewModel> : DaggerAppCompatActivity() {
 
     @Inject
-    lateinit var factory: ViewModelProvider.Factory
+    lateinit var factory: ViewModelProviderFactory
 
     lateinit var mViewBinding: VB
     lateinit var mViewModel: VM

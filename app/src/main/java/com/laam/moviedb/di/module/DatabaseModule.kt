@@ -11,7 +11,7 @@ import javax.inject.Singleton
  * Created by luthfiarifin on 7/4/2020.
  */
 @Module
-abstract class DatabaseModule {
+class DatabaseModule {
 
     @Singleton
     @Provides
