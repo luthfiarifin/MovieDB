@@ -1,6 +1,7 @@
 package com.laam.moviedb.di.module
 
 import androidx.lifecycle.ViewModel
+import com.laam.moviedb.ui.detail.DetailViewModel
 import com.laam.moviedb.ui.main.MainViewModel
 import dagger.Binds
 import dagger.MapKey
@@ -25,5 +26,10 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(MainViewModel::class)
     abstract fun bindMainViewModel(mainViewModel: MainViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(DetailViewModel::class)
+    abstract fun bindDetailViewModel(detailViewModel: DetailViewModel): ViewModel
 
 }
