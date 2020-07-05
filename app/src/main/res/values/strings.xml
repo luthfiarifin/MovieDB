@@ -2,5 +2,7 @@
     <string name="app_name">MovieDB</string>
 
     <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
-    <string name="movie_image">movie_image</string>
+    <string name="lorem">Lorem.</string>
+    <string name="movie_image">Movie Image</string>
+    <string name="movie_header">Movie Header</string>
 </resources>

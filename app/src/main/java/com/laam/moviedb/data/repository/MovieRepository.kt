@@ -34,4 +34,6 @@ class MovieRepository @Inject constructor(
 
         }.asFlow().flowOn(Dispatchers.IO)
     }
+
+    fun getMovieById(movieId: Int) = moviesDao.getMovieById(movieId)
 }

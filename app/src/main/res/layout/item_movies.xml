@@ -26,11 +26,13 @@
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/movie_image"
                 android:minHeight="200dp"
+                android:transitionName="photo"
                 app:imageMovieUrl="@{data.posterPath}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:src="@mipmap/ic_launcher" />
+                tools:src="@mipmap/ic_launcher"
+                tools:targetApi="lollipop" />
 
             <TextView
                 android:id="@+id/textView"

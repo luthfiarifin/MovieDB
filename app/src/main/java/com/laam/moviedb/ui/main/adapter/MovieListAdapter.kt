@@ -2,7 +2,6 @@ package com.laam.moviedb.ui.main.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -31,12 +30,12 @@ class MovieListAdapter(
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
         holder.binding.data = getItem(position)
         holder.binding.root.setOnClickListener {
-            onItemClickListener.onItemClicked(getItem(position), holder.binding.imageView)
+            onItemClickListener.onItemClicked(getItem(position))
         }
     }
 
     interface OnItemClickListener {
-        fun onItemClicked(movie: Movie, imageView: ImageView)
+        fun onItemClicked(movie: Movie)
     }
 
     companion object {

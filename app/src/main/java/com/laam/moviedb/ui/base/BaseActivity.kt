@@ -1,6 +1,7 @@
 package com.laam.moviedb.ui.base
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
@@ -30,5 +31,16 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : ViewModel> : DaggerAppCom
     abstract fun getViewModel(): Class<VM>
 
     abstract fun getLayoutId(): Int
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                return true
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
 
 }

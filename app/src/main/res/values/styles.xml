@@ -8,6 +8,13 @@
         <item name="fontFamily">@font/google_sans</item>
     </style>
 
+    <!-- The theme without ActionBar -->
+    <style name="AppTheme.NoActionBar">
+        <item name="android:fontFamily">@font/google_sans</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <style name="MoviesItemImage">
         <item name="android:layout_marginStart">@dimen/dimen_16</item>
         <item name="android:layout_marginTop">@dimen/dimen_16</item>
@@ -33,6 +40,30 @@
         <item name="android:textAlignment">textStart</item>
         <item name="android:maxLines">1</item>
         <item name="android:layout_marginBottom">@dimen/dimen_16</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents">
+        <item name="android:fontFamily">@font/google_sans</item>
+    </style>
+
+    <style name="MoviesDetailTitleText">
+        <item name="android:layout_marginStart">@dimen/dimen_16</item>
+        <item name="android:layout_marginTop">@dimen/dimen_16</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_16</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="MoviesDetailOverviewText">
+        <item name="android:layout_marginStart">@dimen/dimen_16</item>
+        <item name="android:layout_marginTop">@dimen/dimen_16</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_16</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_16</item>
+        <item name="android:textAlignment">textStart</item>
         <item name="android:textColor">@color/textColor</item>
         <item name="android:textSize">12sp</item>
     </style>
