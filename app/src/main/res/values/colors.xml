@@ -6,4 +6,7 @@
 
     <color name="textColor">#131313</color>
     <color name="textSubtitleColor">#333333</color>
+
+    <color name="colorStatusConnected">#43A047</color>
+    <color name="colorStatusNotConnected">#D32F2F</color>
 </resources>

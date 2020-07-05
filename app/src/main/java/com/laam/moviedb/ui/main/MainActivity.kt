@@ -1,9 +1,14 @@
 package com.laam.moviedb.ui.main
 
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.RequiresApi
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import com.laam.moviedb.R
 import com.laam.moviedb.databinding.ActivityMainBinding
@@ -11,6 +16,7 @@ import com.laam.moviedb.model.Movie
 import com.laam.moviedb.ui.base.BaseActivity
 import com.laam.moviedb.ui.detail.DetailActivity
 import com.laam.moviedb.ui.main.adapter.MovieListAdapter
+import com.laam.moviedb.utils.NetworkUtils
 import com.laam.moviedb.utils.State
 
 /**
@@ -31,6 +37,59 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(),
         initView()
 
         initMovies()
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            handleNetworkChange()
+        }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+    private fun handleNetworkChange() {
+        NetworkUtils.getNetworkLiveData(applicationContext).observe(this, Observer { isConnected ->
+            if (!isConnected) {
+                mViewBinding.apply {
+                    textViewNetworkStatus.text = resources.getString(R.string.text_no_connectivity)
+                    networkStatusLayout.apply {
+                        visibility = View.VISIBLE
+                        setBackgroundColor(
+                            ContextCompat.getColor(
+                                this@MainActivity,
+                                R.color.colorStatusNotConnected
+                            )
+                        )
+                    }
+                }
+            } else {
+                if (mViewModel.moviesLiveData.value is State.Error || mRvAdapter.itemCount == 0) {
+                    getMovies()
+                }
+
+                mViewBinding.apply {
+                    textViewNetworkStatus.text =
+                        resources.getString(R.string.text_back_connectivity)
+
+                    networkStatusLayout.apply {
+                        setBackgroundColor(
+                            ContextCompat.getColor(
+                                this@MainActivity,
+                                R.color.colorStatusConnected
+                            )
+                        )
+
+                        animate().apply {
+                            alpha(1f)
+                            startDelay = 1000
+                            duration = 1000
+                            setListener(object : AnimatorListenerAdapter() {
+                                override fun onAnimationEnd(animation: Animator?) {
+                                    visibility = View.GONE
+                                }
+                            })
+                        }
+                    }
+                }
+            }
+        })
     }
 
     private fun initView() {
