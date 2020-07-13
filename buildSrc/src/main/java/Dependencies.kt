@@ -59,3 +59,16 @@ object Coroutines {
     const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.coroutine}"
     const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Version.coroutine}"
 }
+
+object Modules {
+    // App
+    const val app = ":app"
+
+    // Data
+    const val data =":data"
+
+    // Libraries
+    const val abstraction = ":libraries:abstraction"
+    const val database = ":libraries:database"
+    const val network = ":libraries:network"
+}

@@ -53,4 +53,7 @@ dependencies {
     testImplementation(Testing.jUnit)
     androidTestImplementation(Testing.extJUnit)
     androidTestImplementation(Testing.espresso)
+
+    implementation(project(Modules.database))
+    implementation(project(Modules.network))
 }
