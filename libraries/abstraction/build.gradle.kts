@@ -59,6 +59,13 @@ dependencies {
     kapt(Dagger.compiler)
     kapt(Dagger.androidProcessor)
 
+    // Coroutines
+    implementation(Coroutines.core)
+    implementation(Coroutines.android)
+
+    // Retrofit
+    implementation(Dependencies.retrofit)
+
     testImplementation(Testing.jUnit)
     androidTestImplementation(Testing.extJUnit)
     androidTestImplementation(Testing.espresso)
