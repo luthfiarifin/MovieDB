@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     kotlin("android")
     kotlin("android.extensions")
     kotlin("kapt")
@@ -50,10 +50,22 @@ dependencies {
     kapt(Dagger.compiler)
     kapt(Dagger.androidProcessor)
 
+    // Retrofit
+    implementation(Dependencies.retrofit)
+
+    // Moshi
+    implementation(Moshi.kotlin)
+
+    // Room
+    implementation(Room.ktx)
+    implementation(Room.runtime)
+    kapt(Room.compiler)
+
     testImplementation(Testing.jUnit)
     androidTestImplementation(Testing.extJUnit)
     androidTestImplementation(Testing.espresso)
 
+    implementation(project(Modules.abstraction))
     implementation(project(Modules.database))
     implementation(project(Modules.network))
 }
