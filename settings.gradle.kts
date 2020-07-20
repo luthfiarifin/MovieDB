@@ -3,6 +3,7 @@ include(
     ":libraries:database",
     ":libraries:network",
     ":libraries:abstraction",
-    ":data"
+    ":data",
+    ":features:movies"
 )
 rootProject.name = "MovieDB"
