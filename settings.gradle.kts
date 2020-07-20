@@ -1,8 +1,8 @@
-include(":data")
 include(
     ":app",
     ":libraries:database",
     ":libraries:network",
-    ":libraries:abstraction"
+    ":libraries:abstraction",
+    ":data"
 )
 rootProject.name = "MovieDB"
