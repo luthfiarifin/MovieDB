@@ -44,6 +44,11 @@ dependencies {
     implementation(Android.ktx)
     implementation(Android.appcompat)
 
+    // Design
+    implementation(Dependencies.materialDesign)
+    implementation(Dependencies.glide)
+    implementation(Android.constraintLayout)
+
     // Dagger
     implementation(Dagger.dagger)
     implementation(Dagger.androidSupport)
@@ -53,6 +58,10 @@ dependencies {
     // Coroutines
     implementation(Coroutines.core)
     implementation(Coroutines.android)
+
+    // Lifecycle
+    implementation(Lifecycle.viewModel)
+    implementation(Lifecycle.liveData)
 
     testImplementation(Testing.jUnit)
     androidTestImplementation(Testing.extJUnit)
