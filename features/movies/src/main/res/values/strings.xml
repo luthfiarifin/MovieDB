@@ -1,0 +1,8 @@
+<resources>
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="lorem">Lorem.</string>
+    <string name="movie_image">Movie Image</string>
+    <string name="movie_header">Movie Header</string>
+    <string name="text_no_connectivity">No Connection</string>
+    <string name="text_back_connectivity">Back Online</string>
+</resources>
